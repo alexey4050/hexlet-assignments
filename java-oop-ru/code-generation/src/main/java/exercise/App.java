@@ -11,7 +11,8 @@ public class App {
     public static void save(Path filePath, Car car) {
         try {
             String jsonString = car.serialize();
-            Files.write(filePath, jsonString.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+            Files.write(filePath, jsonString.getBytes(),
+                    StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
             e.printStackTrace();
         }

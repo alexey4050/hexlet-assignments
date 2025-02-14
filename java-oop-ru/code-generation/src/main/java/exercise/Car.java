@@ -14,11 +14,11 @@ class Car {
     User owner;
 
     // BEGIN
-    private static final ObjectMapper objectMapper = new ObjectMapper();
+    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     public String serialize() {
         try {
-            return objectMapper.writeValueAsString(this);
+            return OBJECT_MAPPER.writeValueAsString(this);
         } catch (IOException e) {
             e.printStackTrace();
             return null;
@@ -27,7 +27,7 @@ class Car {
 
     public static Car deserialize(String jsonString) {
         try {
-            return objectMapper.readValue(jsonString, Car.class);
+            return OBJECT_MAPPER.readValue(jsonString, Car.class);
         } catch (IOException e) {
             e.printStackTrace();
             return null;
