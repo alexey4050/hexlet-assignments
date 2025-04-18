@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>${userPage.getUser().getFirstName()} ${userPage.getUser().getFirstName()}</h1>
+        <h1>${userPage.getUser().getFirstName()} ${userPage.getUser().getLastName()}</h1>
         <p>Email: ${userPage.getUser().getEmail()}</p>
         <a href="/users" class="btn btn-primary">Назад к списку пользователей</a>
     </div>
