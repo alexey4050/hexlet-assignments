@@ -35,7 +35,7 @@ public final class App {
                     .orElseThrow(() -> new NotFoundResponse("User not found"));
 
             UserPage userPage = new UserPage(user);
-            ctx.render("users/show.jte", model("user", user));
+            ctx.render("users/show.jte", model("userPage", userPage));
         });
         // END
 
