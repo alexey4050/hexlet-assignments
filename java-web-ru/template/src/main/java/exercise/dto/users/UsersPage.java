@@ -13,9 +13,5 @@ import lombok.Setter;
 @Setter
 public class UsersPage {
     private final List<User> users;
-
-    public List<User> getUsers() {
-        return users;
-    }
 }
 // END
