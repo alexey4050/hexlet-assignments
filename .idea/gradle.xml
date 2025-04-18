@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-oop-ru/classes-and-objects" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/8.13/libexec" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-oop-ru/classes-and-objects" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/dynamic-routes" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/8.13/libexec" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/dynamic-routes" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/handlers" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/8.13/libexec" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/handlers" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/http-session" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/8.13/libexec" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/http-session" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/javalin-intro" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/8.13/libexec" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/javalin-intro" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/template" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/8.13/libexec" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/template" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
