@@ -31,7 +31,7 @@
 </main>
 
 <footer class="mt-auto py-3 bg-light text-center">
-    <p>&copy; 2023 <a href="https://github.com/alexey4050" target="_blank">Мой профиль на GitHub</a></p>
+    <p>&copy; 2025 <a href="https://github.com/alexey4050" target="_blank">Мой профиль на GitHub</a></p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
