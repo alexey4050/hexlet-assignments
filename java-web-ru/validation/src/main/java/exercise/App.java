@@ -40,41 +40,23 @@ public final class App {
         });
 
         app.post("/articles", ctx -> {
-            var title = ctx.formParam("title");
-            var content = ctx.formParam("content");
-            var errors = new HashMap<String, List<ValidationError<Object>>>();
-
             try {
-                if (title == null || title.trim().length() < 2) {
-                    errors.put("title",
-                            List.of(new ValidationError<>("Название не должно быть короче двух символов", null)));
-                }
-
-                if (content == null || content.trim().length() < 10) {
-                    errors.put("content",
-                            List.of(new ValidationError<>("Статья должна быть не короче 10 символов", null)));
-                }
-
-                if (title != null && ArticleRepository.existsByTitle(title)) {
-                    errors.put("title",
-                            List.of(new ValidationError<>("Статья с таким названием уже существует", null)));
-                }
-
-                if (!errors.isEmpty()) {
-                    throw new ValidationException(errors);
-                }
-
-                Article article = new Article(title, content);
-                ArticleRepository.save(article);
+                var title = ctx.formParamAsClass("title", String.class)
+                        .check(x -> x.length() > 2, "Название не должно быть короче двух символов")
+                        .check(stt -> !ArticleRepository.existsByTitle(stt), "Статья с таким названием уже существует")
+                        .get();
+                var content = ctx.formParamAsClass("content", String.class)
+                        .check(x -> x.length() > 10, "Статья должна быть не короче 10 символов")
+                        .get();
+                var artic = new Article(title, content);
+                ArticleRepository.save(artic);
                 ctx.redirect("/articles");
 
             } catch (ValidationException e) {
+                var title = ctx.formParam("title");
+                var content = ctx.formParam("content");
                 var page = new BuildArticlePage(title, content, e.getErrors());
-                ctx.status(422);
-                ctx.render("/articles/build.jte", model("page", page));
-            } catch (Exception e) {
-                e.printStackTrace();
-                ctx.status(500).result("Internal Server Error");
+                ctx.render("articles/build.jte", model("page", page)).status(422);
             }
         });
         // END
