@@ -45,16 +45,16 @@ public final class App {
             var errors = new HashMap<String, List<ValidationError<Object>>>();
 
             try {
-                if (title == null || title.length() < 2) {
-                    errors.put("title", List.of(new ValidationError<>("Статья не должна быть короче двух символов")));
+                if (title == null || title.trim().length() < 2) {
+                    errors.put("title", List.of(new ValidationError<>("Название не должно быть короче двух символов", null)));
                 }
 
-                if (content == null || content.length() < 10) {
-                    errors.put("content", List.of(new ValidationError<>("Статья должна быть не короче 10 символов")));
+                if (content == null || content.trim().length() < 10) {
+                    errors.put("content", List.of(new ValidationError<>("Статья должна быть не короче 10 символов", null)));
                 }
 
-                if (ArticleRepository.existsByTitle(title)) {
-                    errors.put("title", List.of(new ValidationError<>("Статья с таким названием уже существует")));
+                if (title != null && ArticleRepository.existsByTitle(title)) {
+                    errors.put("title", List.of(new ValidationError<>("Статья с таким названием уже существует", null)));
                 }
 
                 if (!errors.isEmpty()) {
@@ -63,12 +63,15 @@ public final class App {
 
                 Article article = new Article(title, content);
                 ArticleRepository.save(article);
-                ctx.redirect("/article");
+                ctx.redirect("/articles");
 
             } catch (ValidationException e) {
                 var page = new BuildArticlePage(title, content, e.getErrors());
                 ctx.status(422);
-                ctx.render("/article/build.jte", model("page", page));
+                ctx.render("/articles/build.jte", model("page", page));
+            } catch (Exception e) {
+                e.printStackTrace();
+                ctx.status(500).result("Internal Server Error");
             }
         });
         // END
