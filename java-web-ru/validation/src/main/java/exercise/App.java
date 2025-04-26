@@ -46,15 +46,18 @@ public final class App {
 
             try {
                 if (title == null || title.trim().length() < 2) {
-                    errors.put("title", List.of(new ValidationError<>("Название не должно быть короче двух символов", null)));
+                    errors.put("title",
+                            List.of(new ValidationError<>("Название не должно быть короче двух символов", null)));
                 }
 
                 if (content == null || content.trim().length() < 10) {
-                    errors.put("content", List.of(new ValidationError<>("Статья должна быть не короче 10 символов", null)));
+                    errors.put("content",
+                            List.of(new ValidationError<>("Статья должна быть не короче 10 символов", null)));
                 }
 
                 if (title != null && ArticleRepository.existsByTitle(title)) {
-                    errors.put("title", List.of(new ValidationError<>("Статья с таким названием уже существует", null)));
+                    errors.put("title",
+                            List.of(new ValidationError<>("Статья с таким названием уже существует", null)));
                 }
 
                 if (!errors.isEmpty()) {
