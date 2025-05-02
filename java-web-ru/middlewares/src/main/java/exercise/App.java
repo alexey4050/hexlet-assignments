@@ -6,6 +6,8 @@ import exercise.controller.RootController;
 import exercise.util.NamedRoutes;
 import io.javalin.rendering.template.JavalinJte;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -33,14 +35,10 @@ public final class App {
 
         // BEGIN
         app.after(ctx -> {
-            try {
-                byte[] responseBodyBytes = ctx.result().getBytes(StandardCharsets.UTF_8);
-                var digest = MessageDigest.getInstance("SHA-256");
-                byte[] hash = digest.digest(responseBodyBytes);
-                String hashString = Base64.getEncoder().encodeToString(hash);
+            String responseBody = ctx.result();
+            if (responseBody != null) {
+                String hashString = DigestUtils.sha256Hex(responseBody.getBytes(StandardCharsets.UTF_8));
                 ctx.header("X-Response-Digest", hashString);
-            } catch (NoSuchAlgorithmException e) {
-                e.printStackTrace();
             }
         });
         // END
