@@ -6,8 +6,6 @@ import exercise.controller.RootController;
 import exercise.util.NamedRoutes;
 import io.javalin.rendering.template.JavalinJte;
 
-import org.apache.commons.codec.digest.DigestUtils;
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
@@ -33,7 +31,7 @@ public final class App {
         app.post(NamedRoutes.postPath("{id}"), PostsController::update);
 
         // BEGIN
-        app.after( ctx -> {
+        app.after(ctx -> {
             try {
                 byte[] responseBodyBytes = ctx.result().getBytes();
                 var digest = MessageDigest.getInstance("SHA-256");
