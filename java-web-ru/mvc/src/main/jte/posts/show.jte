@@ -13,9 +13,7 @@
                 ${page.getPost().getBody()}
             </div>
             <!-- BEGIN -->
-            <div class="mb-3">
                 <p style="text-align: Left"><a href="${NamedRoutes.editPostPath(page.getPost().getId())}" class="btn btn-secondary">Редактировать</a></p>
-            </div>
             <!-- END -->
         </main>
     `

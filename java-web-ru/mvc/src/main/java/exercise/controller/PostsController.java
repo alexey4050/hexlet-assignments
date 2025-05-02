@@ -14,6 +14,8 @@ import io.javalin.http.Context;
 import io.javalin.validation.ValidationException;
 import io.javalin.http.NotFoundResponse;
 
+import java.util.Collections;
+
 public class PostsController {
 
     public static void build(Context ctx) {
@@ -62,7 +64,7 @@ public class PostsController {
     public static void edit(Context ctx) {
         var id = ctx.pathParamAsClass("id", Long.class).get();
         var post = PostRepository.find(id)
-                .orElseThrow(() -> new NotFoundResponse("Entity with id = " + id + " not found"));
+                .orElseThrow(() -> new NotFoundResponse("Пост не найден, id=" + id));
         var name = post.getName();
         var body = post.getBody();
 
@@ -70,15 +72,17 @@ public class PostsController {
         ctx.render("posts/edit.jte", model("page", page));
     }
 
-    public static void update(Context ctx) {
-        var id = ctx.formParamAsClass("id", Long.class).get();
+    public static void update (Context ctx) {
+        var id = ctx.pathParamAsClass("id", Long.class).get();
         try {
             var name = ctx.formParamAsClass("name", String.class)
-                    .check(value -> value.length() >= 2, "Название не должно быть меньше двух символов").get();
+                    .check(value -> value.length() >= 2, "Название не должно быть короче двух символов")
+                    .get();
             var body = ctx.formParamAsClass("body", String.class)
-                    .check(value -> value.length() >= 10, "Пост должен быть не короче 10 символов").get();
+                    .check(value -> value.length() >= 10, "Пост должен быть не короче 10 символов")
+                    .get();
             var post = PostRepository.find(id)
-                    .orElseThrow(() -> new NotFoundResponse("Entity with id = " + id + " not found"));
+                    .orElseThrow(() -> new NotFoundResponse("Пост не найден, id=" + id));
             post.setName(name);
             post.setBody(body);
             ctx.redirect(NamedRoutes.postsPath());
@@ -86,7 +90,7 @@ public class PostsController {
             var name = ctx.formParam("name");
             var body = ctx.formParam("body");
             var page = new EditPostPage(id, name, body, e.getErrors());
-            ctx.render("posts/edit.jte", model("page", page)).status(422);
+            ctx.render("posts/edit.jte", Collections.singletonMap("page", page)).status(422);
         }
     }
     // END
