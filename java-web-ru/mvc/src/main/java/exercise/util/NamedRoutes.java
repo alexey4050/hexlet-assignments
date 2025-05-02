@@ -24,7 +24,7 @@ public class NamedRoutes {
 
     // BEGIN
     public static String editPostPath(String id) {
-        return "/posts/" + id + "edit";
+        return "/posts/" + id + "/edit";
     }
     public static String editPostPath(Long id) {
         return editPostPath(String.valueOf(id));
