@@ -14,12 +14,66 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-spring-boot-ru/first-start" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-spring-boot-ru/first-start" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/cookies" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/cookies" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/crud" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/crud" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/database" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/database" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/dynamic-routes" />
         <option name="gradleHome" value="/usr/local/Cellar/gradle/8.13/libexec" />
         <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/java-web-ru/dynamic-routes" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/flash" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/flash" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/get-form" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/get-form" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -54,12 +108,76 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/layout" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/8.13/libexec" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/layout" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/middlewares" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/middlewares" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/mvc" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/mvc" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/post-form" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/post-form" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/servlets" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/servlets" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/session" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/session" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/template" />
         <option name="gradleHome" value="/usr/local/Cellar/gradle/8.13/libexec" />
         <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/java-web-ru/template" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-web-ru/validation" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-web-ru/validation" />
           </set>
         </option>
       </GradleProjectSettings>

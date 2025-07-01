@@ -25,6 +25,7 @@ dependencies {
     implementation("org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1")
 
     implementation("org.slf4j:slf4j-simple:2.0.7")
+    implementation("com.konghq:unirest-java:3.14.5")
 
     implementation("org.zalando:logbook-core:3.3.0")
     implementation("org.zalando:logbook-servlet:3.3.0")
