@@ -16,7 +16,7 @@ public class Application {
                 String returnType = method.getReturnType().getSimpleName();
                 String methodName = method.getName();
 
-                System.out.println("Method" + methodName + " returns a value of type "
+                System.out.println("Method " + methodName + " returns a value of type "
                         + returnType);
             }
         }
