@@ -14,11 +14,29 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-spring-boot-ru/annotations" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-spring-boot-ru/annotations" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/java-spring-boot-ru/first-start" />
         <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/java-spring-boot-ru/first-start" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/java-spring-boot-ru/http-crud" />
+        <option name="gradleJvm" value="homebrew21 HomeBrew Openjdk-21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/java-spring-boot-ru/http-crud" />
           </set>
         </option>
       </GradleProjectSettings>
