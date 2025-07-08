@@ -37,6 +37,13 @@ public class ProductsController {
     }
 
     // BEGIN
+    @GetMapping("/{id}")
+    public Product show(@PathVariable long id) {
+        return productRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Product with id " + id
+                + " not found"));
+    }
+
     @PutMapping("/{id}")
     public Product update(@PathVariable long id, @RequestBody Product productData) {
         var product = productRepository.findById(id)
