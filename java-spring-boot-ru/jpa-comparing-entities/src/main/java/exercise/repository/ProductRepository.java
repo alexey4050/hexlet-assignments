@@ -7,4 +7,5 @@ import exercise.model.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
+    boolean existsByTitleAndPrice(String title, int price);
 }
