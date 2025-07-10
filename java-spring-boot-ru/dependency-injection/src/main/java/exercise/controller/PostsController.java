@@ -63,7 +63,7 @@ public class PostsController {
     @DeleteMapping(path = "/{id}")
     public void delete(@PathVariable Long id) {
         commentRepository.deleteByPostId(id);
-        postRepository.findById(id);
+        postRepository.deleteById(id);
     }
 }
 // END
