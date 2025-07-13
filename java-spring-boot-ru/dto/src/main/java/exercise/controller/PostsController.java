@@ -41,7 +41,8 @@ public class PostsController {
     @ResponseStatus(HttpStatus.OK)
     public PostDTO show(@PathVariable Long id) {
         var post = postRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Not Found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Post with id " + id
+                        + " not found"));
         return toDTO(post);
 
     }
@@ -56,6 +57,7 @@ public class PostsController {
         List<CommentDTO> commentDTOs = comments.stream()
                 .map(this::commentToDTO)
                 .toList();
+        dto.setComments(commentDTOs);
         return dto;
     }
 
