@@ -75,9 +75,10 @@ public class TasksController {
     }
 
     @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public TaskDTO update(@PathVariable Long id, @Valid @RequestBody TaskUpdateDTO taskData) {
         var task = taskRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("User with id " + id
+                .orElseThrow(() -> new ResourceNotFoundException("Task with id " + id
                         + "not found"));
 
         if (!userRepository.existsById(taskData.getAssigneeId())) {
@@ -90,9 +91,15 @@ public class TasksController {
                     + "already exists");
         }
 
-        taskMapper.update(taskData, task);
-        var updateTask = taskRepository.save(task);
-        return taskMapper.map(updateTask);
+        task.setTitle(taskData.getTitle());
+        task.setDescription(taskData.getDescription());
+
+        var assignee = userRepository.findById(taskData.getAssigneeId())
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+        task.setAssignee(assignee);
+
+        var updatedTask = taskRepository.save(task);
+        return taskMapper.map(task);
     }
 
     @DeleteMapping("/{id}")
