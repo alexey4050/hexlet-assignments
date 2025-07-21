@@ -84,8 +84,8 @@ public class TasksController {
             throw new ResourceNotFoundException("User with id " + taskData.getAssigneeId()
                     + "not found");
         }
-        if (!taskData.getTitle().equals(task.getTitle()) &&
-                taskRepository.findByTitle(taskData.getTitle()).isPresent()) {
+        if (!taskData.getTitle().equals(task.getTitle())
+                && taskRepository.findByTitle(taskData.getTitle()).isPresent()) {
             throw new ResourceNotFoundException("Task with title " + taskData.getTitle()
                     + "already exists");
         }
