@@ -38,7 +38,7 @@ public class BooksController {
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    public BookDTO create(@Valid @RequestBody BookCreateDTO bookData, @PathVariable Long id) {
+    public BookDTO create(@Valid @RequestBody BookCreateDTO bookData) {
         return bookService.create(bookData);
     }
 

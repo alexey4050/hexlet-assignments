@@ -32,7 +32,7 @@ public class BookService {
 
     public BookDTO findById(Long id) {
         var book = bookRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Bok not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Book not found"));
         return bookMapper.map(book);
     }
 
